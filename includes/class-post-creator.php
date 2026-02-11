@@ -75,7 +75,7 @@ $content .= $footer;
         
 $post_id = wp_insert_post([
     'post_type'    => 'topics',
-    'post_status'  => 'draft',
+    'post_status'  => 'private',
     'post_title'   => wp_strip_all_tags( $item->get_title() ),
     'post_content' => $content,
 //    'post_excerpt' => mb_strimwidth(

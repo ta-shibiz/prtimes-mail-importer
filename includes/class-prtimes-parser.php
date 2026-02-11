@@ -59,10 +59,13 @@ class PRTIMES_Parser {
                 'matched_keywords' => $matched_keywords,
             ];
 
-            error_log(
-                '[PR TIMES] MATCH: ' . $title .
-                ' / KW: ' . implode( ', ', $matched_keywords )
+            file_put_contents(
+                PRTIMES_MI_LOG,
+                '[' . date('Y-m-d H:i:s') . '] [Parser] MATCH: ' .
+                $title . ' / KW: ' . implode(', ', $matched_keywords) . "\n",
+                FILE_APPEND
             );
+
         }
     }
 

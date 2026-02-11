@@ -67,9 +67,15 @@ function prtimes_mail_importer_settings_page() {
     <form method="post" action="options.php">
         <?php settings_fields( 'prtimes_mail_importer_settings' ); ?>
         <table class="form-table">
+            <tr>
+                <th></th>
+                <td>プレビュー確認<br>
+                <a href="/topics" target="_blank">公開ページトピック一覧</a>
+                    </td>
+            </tr>
             
             <!-- メール設定（将来廃止予定だが残す） -->
-            <tr style="">
+            <tr style="display:none;">
                 <th scope="row">メールサーバー</th>
                 <td><input type="text"
                                name="prtimes_mail_importer[server]"
@@ -115,6 +121,7 @@ function prtimes_mail_importer_settings_page() {
                         ミリタリー<br>
                         アウトドア </p></td>
             </tr>
+            
         </table>
         <?php submit_button(); ?>
     </form>
